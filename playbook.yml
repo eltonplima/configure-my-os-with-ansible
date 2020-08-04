@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  become: yes
+  roles:
+    - tools
+    - docker
+    - multimedia
+    - office
+    - development
+    - shell
+    - wm
+    - security

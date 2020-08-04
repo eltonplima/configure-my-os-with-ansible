@@ -1,0 +1,3 @@
+- name: Install multimedia softwares
+  snap: name={{ item }} state=present
+  loop: ['obs-studio', 'vlc', 'gimp']

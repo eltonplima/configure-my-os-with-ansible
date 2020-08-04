@@ -1,0 +1,6 @@
+- apt_repository:
+    repo: ppa:regolith-linux/release
+
+- name: Install regolith-desktop
+  apt: update_cache=yes name={{ item }} state=latest
+  loop: ['regolith-desktop', 'i3xrocks-net-traffic', 'i3xrocks-cpu-usage', 'i3xrocks-time', 'i3xrocks-battery']

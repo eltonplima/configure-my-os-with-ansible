@@ -1,0 +1,13 @@
+- name: Add peek GPG apt Key
+  apt_key:
+    url: https://keyserver.ubuntu.com/pks/lookup?op=hget&search=eedf7ede39b41e8eecdcf7832b959b4c
+    state: present
+
+- name: Add peek Repository
+  apt_repository:
+    repo: deb http://ppa.launchpad.net/peek-developers/stable/ubuntu focal main
+    state: present
+
+- name: Install tools
+  apt: name={{ item }} state=latest update_cache=yes
+  loop: ['htop', 'wireshark', 'peek', 'flameshot', 'rsync', 'firefox']
