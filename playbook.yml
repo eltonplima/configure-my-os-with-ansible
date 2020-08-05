@@ -2,6 +2,7 @@
 - hosts: localhost
   become: yes
   roles:
+    - common
     - tools
     - docker
     - multimedia
@@ -10,3 +11,4 @@
     - shell
     - wm
     - security
+    - games
