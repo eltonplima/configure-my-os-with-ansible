@@ -1,3 +1,6 @@
 - name: Install retroarch
   snap: name={{ item }} state=present classic=yes
   loop: ['retroarch']
+
+- name: Install steam
+  apt: update_cache=yes name=steam state=latest
