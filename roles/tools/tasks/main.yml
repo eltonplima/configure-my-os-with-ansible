@@ -10,4 +10,4 @@
 
 - name: Install tools
   apt: name={{ item }} state=latest update_cache=yes
-  loop: ['htop', 'wireshark', 'peek', 'flameshot', 'rsync', 'firefox']
+  loop: ['htop', 'wireshark', 'peek', 'flameshot', 'rsync', 'iotop']
