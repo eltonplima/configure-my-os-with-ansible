@@ -1,0 +1,11 @@
+- name: Install chat softwares
+  snap: name={{ item }} state=present
+  loop: ['telegram-desktop']
+
+- name: Install chat softwares with classic option
+  snap: name={{ item }} state=present classic=yes
+  loop: ['slack']
+
+- name: Install Microsoft Teams
+  apt:
+    deb: https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.3.00.16851_amd64.deb
