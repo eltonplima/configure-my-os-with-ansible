@@ -1,7 +1,11 @@
 - name: Install development tools with option --classic
   snap: name={{ item }} state=present classic=yes
-  loop: ['pycharm-professional', 'microk8s', 'heroku', 'code']
+  loop: ['pycharm-professional', 'microk8s', 'heroku', 'code', 'clion']
 
 - name: Install development tools
   snap: name={{ item }} state=present
   loop: ['dbeaver-ce', 'postman', 'poedit']
+
+- name: Install development with apt
+  apt: name={{ item }} state=present
+  loop: ['vim']
