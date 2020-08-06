@@ -1,6 +1,6 @@
 - name: Update aditional groups of user 'eltonplima'
   user:
     name: eltonplima
-    shell: /bin/bash
+    shell: /bin/zsh
     groups: adm,sudo,plugdev,video,lpadmin,sambashare,microk8s,docker
     append: yes
