@@ -1,0 +1,3 @@
+- name: Install devices management tools
+  apt: name={{ item }} state=present
+  loop: ['blueman']
