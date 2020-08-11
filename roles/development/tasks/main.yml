@@ -6,6 +6,6 @@
   snap: name={{ item }} state=present
   loop: ['dbeaver-ce', 'postman', 'poedit']
 
-- name: Install development with apt
+- name: Install development tools and libraries with apt
   apt: name={{ item }} state=present
-  loop: ['vim', 'make', 'build-essential', 'libssl-dev', 'zlib1g-dev', 'libbz2-dev', 'libreadline-dev', 'libsqlite3-dev', 'wget', 'curl', 'llvm', 'libncurses5-dev', 'xz-utils', 'tk-dev', 'libxml2-dev', 'libxmlsec1-dev', 'libffi-dev', 'liblzma-dev']
+  loop: ['vim', 'meld', 'make', 'build-essential', 'libssl-dev', 'zlib1g-dev', 'libbz2-dev', 'libreadline-dev', 'libsqlite3-dev', 'wget', 'curl', 'llvm', 'libncurses5-dev', 'xz-utils', 'tk-dev', 'libxml2-dev', 'libxmlsec1-dev', 'libffi-dev', 'liblzma-dev']
