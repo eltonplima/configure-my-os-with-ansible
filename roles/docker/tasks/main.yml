@@ -12,9 +12,17 @@
     repo: deb https://download.docker.com/linux/ubuntu focal stable
     state: present
 
-- name: Update apt and install docker-ce
-  apt: update_cache=yes name=docker-ce state=latest
+- name: Install docker stack
+  apt: update_cache=yes name={{ item }} state=present
+  loop: ['docker-ce', 'docker-ce-cli', 'containerd.io']
 
 - name: Install Docker Module for Python
   pip:
     name: docker
+
+- name: Install docker-machine
+  get_url:
+    url: https://github.com/docker/machine/releases/download/v0.16.0/docker-machine-linux-x86_64
+    dest: /usr/local/bin/docker-machine
+    group: docker
+    mode: 'u=rx,g=rx'
