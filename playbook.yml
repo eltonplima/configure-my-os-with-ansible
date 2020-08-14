@@ -3,11 +3,11 @@
   become: yes
   roles:
     - common
+    - development
     - tools
     - docker
     - multimedia
     - office
-    - development
     - shell
     - wm
     - security
