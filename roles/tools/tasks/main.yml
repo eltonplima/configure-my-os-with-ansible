@@ -11,3 +11,12 @@
 - name: Install tools
   apt: name={{ item }} state=latest update_cache=yes
   loop: ['htop', 'wireshark', 'peek', 'flameshot', 'rsync', 'iotop']
+
+- name: Download virtualbox 6.1_6.1.12-139181
+  get_url:
+    url: https://download.virtualbox.org/virtualbox/6.1.12/virtualbox-6.1_6.1.12-139181~Ubuntu~eoan_amd64.deb
+    dest: /tmp/virtualbox.deb
+
+- name: Install virtualbox 6.1_6.1.12-139181
+  apt:
+    deb: /tmp/virtualbox.deb
