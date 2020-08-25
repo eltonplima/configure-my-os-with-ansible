@@ -2,6 +2,7 @@
 - hosts: localhost
   become: yes
   roles:
+    - config
     - common
     - development
     - tools

@@ -1,0 +1,9 @@
+- name: Copy ergodox wally udev rule
+  copy:
+    src: "etc/udev/rules.d/50-wally.rules"
+    dest: "/etc/udev/rules.d/50-wally.rules"
+
+- name: Copy ergodox oryx udev rule
+  copy:
+    src: "etc/udev/rules.d/50-oryx.rules"
+    dest: "/etc/udev/rules.d/50-oryx.rules"
