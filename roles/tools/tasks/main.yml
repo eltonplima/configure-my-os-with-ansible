@@ -10,7 +10,7 @@
 
 - name: Install tools
   apt: name={{ item }} state=latest update_cache=yes
-  loop: ['htop', 'wireshark', 'peek', 'flameshot', 'rsync', 'iotop']
+  loop: ['htop', 'wireshark', 'peek', 'flameshot', 'rsync', 'iotop', 'graphviz']
 
 - name: Download virtualbox 6.1_6.1.12-139181
   get_url:
