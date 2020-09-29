@@ -7,3 +7,19 @@
   copy:
     src: "etc/udev/rules.d/50-oryx.rules"
     dest: "/etc/udev/rules.d/50-oryx.rules"
+
+- sysctl:
+    name: vm.max_map_count
+    value: 262144
+    sysctl_file: /etc/sysctl.d/10-elk.conf
+    sysctl_set: yes
+    state: present
+    reload: yes
+
+- sysctl:
+    name: fs.inotify.max_user_watches
+    value: 524288
+    sysctl_file: /etc/sysctl.d/10-pycharm.conf
+    sysctl_set: yes
+    state: present
+    reload: yes
