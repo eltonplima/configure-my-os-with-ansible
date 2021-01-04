@@ -1,7 +1,14 @@
 - name: Install multimedia softwares using snap
   snap: name={{ item }} state=present
   loop: ['obs-studio', 'vlc', 'gimp']
-  
+
 - name: Install multimedia softwares using apt
   apt: name={{ item }} state=present
   loop: ['cheese']
+
+- apt_repository:
+    repo: ppa:audio-recorder/ppa
+
+- name: Install audio recorder
+  apt: update_cache=yes name={{ item }} state=latest
+  loop: ['audio-recorder']
