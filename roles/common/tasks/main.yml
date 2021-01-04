@@ -2,10 +2,10 @@
   apt_repository:
     repo: "{{ item }}"
   loop:
-    - "deb-src http://archive.ubuntu.com/ubuntu focal universe main multiverse restricted"
-    - "deb-src http://archive.ubuntu.com/ubuntu focal-updates universe main multiverse restricted"
-    - "deb-src http://archive.ubuntu.com/ubuntu focal-security universe main multiverse restricted"
-    - "deb http://archive.ubuntu.com/ubuntu focal universe main multiverse restricted"
-    - "deb http://archive.ubuntu.com/ubuntu focal-updates universe main multiverse restricted"
-    - "deb http://archive.ubuntu.com/ubuntu focal-backports main restricted universe multiverse"
-    - "deb http://archive.ubuntu.com/ubuntu focal-security universe main multiverse restricted"
+    - "deb-src http://archive.ubuntu.com/ubuntu groovy universe main multiverse restricted"
+    - "deb-src http://archive.ubuntu.com/ubuntu groovy-updates universe main multiverse restricted"
+    - "deb-src http://archive.ubuntu.com/ubuntu groovy-security universe main multiverse restricted"
+    - "deb http://archive.ubuntu.com/ubuntu groovy universe main multiverse restricted"
+    - "deb http://archive.ubuntu.com/ubuntu groovy-updates universe main multiverse restricted"
+    - "deb http://archive.ubuntu.com/ubuntu groovy-backports main restricted universe multiverse"
+    - "deb http://archive.ubuntu.com/ubuntu groovy-security universe main multiverse restricted"

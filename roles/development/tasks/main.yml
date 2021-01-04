@@ -17,7 +17,7 @@
 
 - name: Add Github CLI Repository
   apt_repository:
-    repo: deb https://cli.github.com/packages focal main
+    repo: deb https://cli.github.com/packages groovy main
     state: present
 
 - name: Install Github CLI
